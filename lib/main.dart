@@ -1,6 +1,10 @@
+import 'package:first_app/login.dart';
+import 'package:first_app/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
-void main(){ 
+import 'pages/home_page.dart';
+
+void main() {
   runApp(Myapp());
 }
 
@@ -9,16 +13,21 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int a = 30;
+    bring(rupees: 50);
     return MaterialApp(
-      home:    Material(
-        child: Center(
-          child: Container(
-              
-          child: Text("Hyyvnnvvnnon"),
-            ),
-        ),
-      ) ,
+      // home: Homepage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.purple),
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => LoginPage(),
+        "login": (context) => LoginPage(),
+        "home": (context) => Homepage()
+      },
     );
   }
-}
 
+  bring({int rupees = 50}) {}
+}
