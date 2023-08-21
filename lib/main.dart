@@ -22,7 +22,7 @@ class Myapp extends StatelessWidget {
       // home: Homepage(),
       themeMode: ThemeMode.light,
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.deepPurple,
         fontFamily: GoogleFonts.lato().fontFamily,
         primaryTextTheme: GoogleFonts.latoTextTheme(),
       ),
